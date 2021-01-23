@@ -52,12 +52,11 @@ module.exports = {
       ],
       '/frontend/javaScript/': [{
           title: 'javaScript基础',
-          sidebarDepth: 4,
+          sidebarDepth: 5,
           children: [{
-              title: 'javaScript基础知识点',
-              path: '/frontend/javaScript/basics',
-            },
-          ]
+            title: 'javaScript基础知识点',
+            path: '/frontend/javaScript/basics',
+          }, ]
         },
         {
           title: 'javaScript高级',
@@ -65,6 +64,14 @@ module.exports = {
           children: [{
             title: 'javaScript高级',
             path: '/frontend/javaScript/advanced'
+          }, ]
+        },
+        {
+          title: 'webApi总结',
+          sidebarDepth: 5,
+          children: [{
+            title: 'webApi总结',
+            path: '/frontend/javaScript/webApi'
           }, ]
         },
       ],

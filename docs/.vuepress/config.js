@@ -8,8 +8,16 @@ module.exports = {
         link: '/'
       },
       {
-        text: '学习文档',
-        link: '/guide/javaScript/'
+        text: '前端知识',
+        items: [{
+            text: 'css',
+            link: '/frontend/css/',
+          },
+          {
+            text: 'javaScript',
+            link: '/frontend/javaScript/',
+          },
+        ]
       },
       {
         text: '通用组件',
@@ -21,22 +29,43 @@ module.exports = {
       },
     ],
     sidebar: {
-      '/guide/': [{
-          title: 'javaScript',
+      '/frontend/css/': [{
+          title: 'CSS相关',
           sidebarDepth: 5,
           children: [{
-              title: 'javaScript基础',
-              path: '/guide/javaScript/',
-            },
-            {
-              title: '基础',
-              path: '/guide/javaScript/text'
+            title: 'css相关',
+            path: '/frontend/css/css-summary',
+          }, ]
+        },
+        {
+          title: 'CSS相关',
+          sidebarDepth: 5,
+          children: [{
+            title: 'css进阶',
+            path: '/frontend/css/css-advanced'
+          }, ]
+        },
+        {
+          title: '测试文件',
+          path: '/frontend/css/text'
+        },
+      ],
+      '/frontend/javaScript/': [{
+          title: 'javaScript基础',
+          sidebarDepth: 4,
+          children: [{
+              title: 'javaScript基础知识点',
+              path: '/frontend/javaScript/basics',
             },
           ]
         },
         {
-          title: '基础',
-          path: '/guide/javaScript/text'
+          title: 'javaScript高级',
+          sidebarDepth: 5,
+          children: [{
+            title: 'javaScript高级',
+            path: '/frontend/javaScript/advanced'
+          }, ]
         },
       ],
       '/guide-components/': [{

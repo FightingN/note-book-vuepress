@@ -9,18 +9,17 @@ npm run docs:build
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
-# Set CNAME for "gh-pages" branch
-# echo 'dbdgs.cn' > CNAME  # 改成你要绑定的域名 
-
-msg='deploy'
-githubUrl=git@github.com:FightingN/note-book-vuepress # 按你的代码仓库信息进行修改
-
-  
+# 如果是发布到自定义域名
+# echo 'www.example.com' > CNAME
 
 git init
 git add -A
-git commit -m "${msg}"
-git push -f $githubUrl master:gh-pages # 推送到github
+git commit -m 'deploy'
 
-cd - # 退回开始所在目录
-rm -rf docs/.vuepress/dist
+# 如果发布到 https://<USERNAME>.github.io
+# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+
+# 如果发布到 https://<USERNAME>.github.io/<REPO>
+git push -f git@github.com:FightingN/note-book-vuepress.git master:gh-pages
+
+cd -

@@ -1,21 +1,21 @@
-[TOC]
 
-# 一、API 和 webAPI
 
-- API（==A==pplication ==P==rogramming ==I==nterface）应用程序编程==接口==（暴露出来的工具）
+# API 和 webAPI
+
+- API: 应用程序编程接口（暴露出来的工具）
 - webAPI：浏览器平台对外公开的提供操作浏览器和网页的接口（BOM、DOM）
 - DOM：文档对象模型，提供一套标准规范【JS 操作 HTML 标签，通过 DOM】
 
-# 二、文档树
+# 文档树
 
 - 文档树：浏览器在加载 html 文件时，会把文档、文档中的标签、属性、文本、注释转换成对象，然后按照标签的关系（父子、兄弟、祖孙）以树状结构存储到内存中。【HTML==>转换元素（DOM 里面对象）】
 - 文档树中的对象，也被称为**节点对象** 。
-- 节点对象的分类：==**文档（document）**== 、==**元素（标签转换的对象）**== 、文本、属性、注释
+- 节点对象的分类：**文档（document）**、**元素（标签转换的对象）**、文本、属性、注释
   ![image](https://note.youdao.com/yws/public/resource/87878989158efcfd4b01af5369090c07/xmlnote/D6DCBBB70FC64211A95FCB166AAF48DA/12331)
 
-# 三、获取元素
+# 获取元素
 
-## 1.id 获取元素
+## id 获取元素
 
 ```js
 <button id="btn">按钮2</button>;

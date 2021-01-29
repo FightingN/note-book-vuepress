@@ -24,6 +24,10 @@ module.exports = {
         link: '/guide-components/'
       },
       {
+        text: '其他',
+        link: '/guide-components/'
+      },
+      {
         text: 'GitHub',
         link: 'https://github.com/FightingN/note-book-vuepress'
       },

@@ -1,21 +1,20 @@
-
-
-# API 和 webAPI
+## API 和 webAPI
 
 - API: 应用程序编程接口（暴露出来的工具）
 - webAPI：浏览器平台对外公开的提供操作浏览器和网页的接口（BOM、DOM）
 - DOM：文档对象模型，提供一套标准规范【JS 操作 HTML 标签，通过 DOM】
 
-# 文档树
+## 文档树
 
 - 文档树：浏览器在加载 html 文件时，会把文档、文档中的标签、属性、文本、注释转换成对象，然后按照标签的关系（父子、兄弟、祖孙）以树状结构存储到内存中。【HTML==>转换元素（DOM 里面对象）】
 - 文档树中的对象，也被称为**节点对象** 。
 - 节点对象的分类：**文档（document）**、**元素（标签转换的对象）**、文本、属性、注释
-  ![image](https://note.youdao.com/yws/public/resource/87878989158efcfd4b01af5369090c07/xmlnote/D6DCBBB70FC64211A95FCB166AAF48DA/12331)
 
-# 获取元素
+<img :src="$withBase('/image/javascript/document.png')" alt="">
 
-## id 获取元素
+## 获取元素
+
+### id 获取元素
 
 ```js
 <button id="btn">按钮2</button>;
@@ -27,7 +26,7 @@ console.log(btn);
 // 细节：若页面上有相同的id值的标签时，在获取时，获取的是id值第一次出现的标签。
 ```
 
-## 2.根据标签名获取一组元素
+### 根据标签名获取一组元素
 
 - **语法**：document.getElementsByTagName('标签名');
 
@@ -49,18 +48,17 @@ console.log( btns[1] );
 // 	console.log( btns[i] );
 // }
 
-
-
-
-
 </script>
-
-注意：数组和伪数组的区别？
-1、相同：都有索引和长度（length）
-2、不同点：伪数组不能够调用真正数组中内置的方法（push、pop、sort...）
 ```
 
-## 3.根据选择器获取单个元素
+:::tip 数组和伪数组的区别？
+
+- 相同：都有索引和长度（length）
+- 不同点：伪数组不能够调用真正数组中内置的方法（push、pop、sort...）
+
+:::
+
+### 根据选择器获取单个元素
 
 **语法**：document.querySelector('选择器');
 
@@ -115,7 +113,7 @@ console.log( btns[1] );
 </script>
 ```
 
-## 4.根据选择器获取一组元素
+### 根据选择器获取一组元素
 
 **语法**：document.querySelectorAll('选择器');
 
@@ -144,22 +142,26 @@ console.log( btns[1] );
 </script>
 ```
 
-- 注意：根据选择器获取元素的方式在 ie8 以下有兼容性问题
+:::tip 注意
 
-# 四、事件基础
+根据选择器获取元素的方式在 ie8 以下有兼容性问题
 
-## 1 什么是事件
+:::
+
+## 事件基础
+
+### 什么是事件
 
 - 用户做的动作就认为事件(用户和网页之间的交互行为（鼠标点击、鼠标进入、鼠标离开、键盘按下、键盘弹起、手指按压、手指移动等等）)
 
-## 2.事件三要素
+### 事件三要素
 
 - 当用户做某个元素上，做了某个动作，调用某个函数里面去写处理程序
   - 事件源：被触发的元素，比如点击的按钮【在哪个元素上发生的事件】
   - 事件类型：如何触发的事件，比如==点击==按钮 【用户做什么动作，动作不同就是事件类型不同】
   - 事件处理程序：事件发生后的结果。【事件处理程序】函数
 
-## 3.给元素注册事件
+### 给元素注册事件
 
 语法：事件源.事件类型 = 事件处理程序;
 
@@ -181,7 +183,7 @@ btn.onclick = function () {
 // ③ 点击按钮时，浏览器自动调用了btn.onclick();
 ```
 
-## 4 事件处理程序中的 this
+### 事件处理程序中的 this
 
 **事件处理程序中的 this 指向事件源** 【当前事件源】
 
@@ -203,9 +205,9 @@ d1.onclick = function () {
 };
 ```
 
-## 5.取消 a 标签默认行为
+### 取消 a 标签默认行为
 
-### 1：事件处理程序中最后设置**return false**
+#### 事件处理程序中最后设置**return false**
 
 ```html
 <a id="link" href="https://www.baidu.com">点击</a>
@@ -219,7 +221,7 @@ d1.onclick = function () {
 </script>
 ```
 
-### 2：设置 a 标签的 href 属性值为：**javascript:**
+#### 设置 a 标签的 href 属性值为：**javascript:**
 
 ```js
   <!-- 方式二：给a标签的herf值设置javascript: ,表示将来点击a时，会阻止默认跳转行为，并且仅仅会执行js代码-->
@@ -230,7 +232,7 @@ d1.onclick = function () {
   <a href="mailto:">打开邮件</a>
 ```
 
-## 6.给一组按钮注册事件，点击弹出‘你好’
+### 给一组按钮注册事件，点击弹出‘你好’
 
 ```html
 <input type="button" value="按钮1" />
@@ -254,7 +256,7 @@ d1.onclick = function () {
 </script>
 ```
 
-## 7.事件类型
+## 事件类型
 
 - onclick【点击事件，单击事件】
 - onmouseenter 鼠标进入元素事件
@@ -343,7 +345,7 @@ d1.onclick = function () {
 </body>
 ```
 
-- oninput 输入事件
+### oninput 输入事件
 
 ```html
 <body>
@@ -362,9 +364,7 @@ d1.onclick = function () {
 </body>
 ```
 
-- onmousedown 鼠标按下
-- onmouseup 鼠标抬起
-- onmousemove 鼠标移动
+### onmousedown 鼠标按下 onmouseup 鼠标抬起 onmousemove 鼠标移动
 
 ```html
 <body>
@@ -391,8 +391,7 @@ d1.onclick = function () {
 </body>
 ```
 
-- onkeydown 键盘按下
-- onkeyup 键盘抬起
+### onkeydown 键盘按下 onkeyup 键盘抬起
 
 ```html
 <body>
@@ -411,9 +410,9 @@ d1.onclick = function () {
 </body>
 ```
 
-# 五、操作元素的属性
+## 操作元素的属性
 
-## 1 语法格式
+### 语法格式
 
 - 获取：
 
@@ -422,11 +421,11 @@ d1.onclick = function () {
 - 设置：
   - **语法：元素.属性名= 值;**
 
-## 2.常见的属性
+### 常见的属性
 
 > id、title、href、src、className、innerText / textContent、innerHTML
 
-### 1.变换类名
+#### 变换类名
 
 ```html
 <head>
@@ -461,7 +460,7 @@ d1.onclick = function () {
 </body>
 ```
 
-### 2.className 操作类名
+#### className 操作类名
 
 ```html
 <div id="box" class="a"></div>
@@ -475,13 +474,11 @@ d1.onclick = function () {
 </script>
 ```
 
-### 3.修改内容(innerText 和 innerHTML)
+#### 修改内容(innerText 和 innerHTML)
 
 - 修改标签的内容,只适用于双标签
-
-#### 1.innerText：只识别文本
-
-#### 2.innerHTML：文本与标签
+- innerText：只识别文本
+- innerHTML：文本与标签
 
 ```html
 <div id="box"><h2>我是div中的标题</h2></div>
@@ -505,7 +502,7 @@ d1.onclick = function () {
 
 - 注意替换内容时，会把之前的内容全部覆盖掉，而不是追加内容
 
-#### 3.innerText 和 textContent 的兼容性问题
+#### innerText 和 textContent 的兼容性问题
 
 - innerText：IE 兼容性好
 - textContent：火狐兼容性好
@@ -524,7 +521,7 @@ d1.onclick = function () {
 </script>
 ```
 
-### 4.案例:点击 a 元素切换图片
+#### 案例:点击 a 元素切换图片
 
 ```html
 <body>
@@ -549,9 +546,9 @@ d1.onclick = function () {
 </body>
 ```
 
-# 六、操作元素的样式
+## 操作元素的样式
 
-## 1 通过 style 属性设置样式
+### 通过 style 属性设置样式
 
 - 语法:元素.style.样式属性名 = '样式属性值';
 
@@ -600,7 +597,7 @@ d1.onclick = function () {
 </body>
 ```
 
-## 2 通过 className 设置样式
+### 通过 className 设置样式
 
 - 语法：元素.className = '类名'
 
@@ -621,7 +618,7 @@ d1.onclick = function () {
 </body>
 ```
 
-### 1.开关灯小案例
+#### 开关灯小案例
 
 ```html
 <body>
@@ -692,7 +689,7 @@ d1.onclick = function () {
 </body>
 ```
 
-### 2.给一组 li 注册点击事件，鼠标点击那个 li 就弹出这个 li 在这一组中的索引位置
+#### 给一组 li 注册点击事件，鼠标点击那个 li 就弹出这个 li 在这一组中的索引位置
 
 ```html
 <head>
@@ -744,9 +741,7 @@ d1.onclick = function () {
 </body>
 ```
 
-### 3.tab 切换
-
-### 4.购物车商品加减按钮
+#### 购物车商品加减按钮
 
 ```html
 <!DOCTYPE html>
@@ -813,24 +808,24 @@ d1.onclick = function () {
 </html>
 ```
 
-# 七、操作表单元素的属性
+## 操作表单元素的属性
 
-## 1 value 操作表单元素的内容
+### value 操作表单元素的内容
 
 - 获取：==元素.value;== 返回字符串
 - 设置：==元素.value = 值;==
 
-## 2.disabled 操作表单元素是否禁用
+### disabled 操作表单元素是否禁用
 
 - 获取：==元素.disabled;== 返回布尔值（true→ 禁用，false→ 不禁用）;
 - 设置：==元素.disabled = 布尔值;==
 
-## 3.checked 操作表单元素是否选中
+### checked 操作表单元素是否选中
 
 - 获取：==元素.checked;== 返回布尔值（true→ 选中，false→ 不选中）;
 - 设置：==元素.checked = 布尔值;==
 
-## 4 selected 操作表单元素的是否选中
+### selected 操作表单元素的是否选中
 
 - 获取： ==元素.selected;==
 - 设置：==元素.selected = 布尔值;==
@@ -858,7 +853,7 @@ d1.onclick = function () {
 </script>
 ```
 
-# 八、自定义属性行内属性
+## 自定义属性行内属性
 
 - 标签上的自定义属性不可以元素点的方式访问
 - 获取
@@ -897,14 +892,14 @@ d1.onclick = function () {
   </body>
   ```
 
-# 九、节点的层级
+## 节点的层级
 
-## 1.节点的关系
+### 节点的关系
 
 - 父子关系
 - 兄弟关系
 
-## 2.节点的 nodeType、nodeName、nodeValue 的属性
+### 节点的 nodeType、nodeName、nodeValue 的属性
 
 - 节点的 nodeType 属性的作用：元素 → 1； 文本 →3
 - 节点的 nodeName 属性的作用：元素 → 大写的标签名 文本 → `#text`
@@ -954,29 +949,29 @@ d1.onclick = function () {
 </body>
 ```
 
-## 3.根据子节点获取父节点
+### 根据子节点获取父节点
 
 - 语法：**子节点.parentNode**
 
-## 4.根据父节点获取子节点
+### 根据父节点获取子节点
 
 - 语法：**父节点.childNodes;** 获取的子节点包含文本和元素
 - 语法：**父元素.children;** 获取的子节点仅仅包含元素
 - 语法：**父节点.firstElementChild;** 获取第一个子元素节点
 - 语法：**父节点.lastElementChild;** 获取最后一个元素节点
 
-## 5.获取兄弟节点
+### 获取兄弟节点
 
 - 获取下一个兄弟
   - 语法：**节点.nextElementSibling**
 - 获取上一个兄弟
   - 语法：**节点.previousElementSibling**
 
-# 十、创建元素
+## 创建元素
 
-## 1.动态创建元素
+### 动态创建元素
 
-### 1.通过 innerHTML 创建元素
+- 通过 innerHTML 创建元素
 
 - 语法：**元素.innerHTML = '内容';**
 
@@ -1003,7 +998,7 @@ d1.onclick = function () {
 </body>
 ```
 
-### 2.通过 document.createElement 创建元素
+- 通过 document.createElement 创建元素
 
 - 语法：**document.createElement(‘标签名’);** 返回一个新的元素对象
 
@@ -1033,11 +1028,11 @@ d1.onclick = function () {
 > - innerHTML 在追加多个元素时执行速度慢，性能差。不推荐使用
 > - createElement 方法执行速度快，**性能高** ，在实际开发中**推荐使用** 。
 
-## 2. 动态追加元素
+### 动态追加元素
 
 - 语法：**父元素.appendChild(子元素);**
 
-## 3.动态删除元素
+### 动态删除元素
 
 - 语法：**父元素.removeChild(子元素);**
 
@@ -1061,7 +1056,7 @@ d1.onclick = function () {
 </body>
 ```
 
-## 4.插入元素
+### 插入元素
 
 - 语法：**父节点.insertBefore(新的节点,旧的子节点)**
   DOM 提供了 insertBefore()方法，这个方法将一个新元素插入到一个现有的元素中
@@ -1081,11 +1076,11 @@ oldEle.parentNode.insertBefore(newEle, oldEle);
 //将newEle插入到oldEle之前
 ```
 
-## 5.替换元素
+### 替换元素
 
 - 语法：**父节点.replaceChild(新的节点,旧的子节点)**
 
-## 6.克隆元素
+### 克隆元素
 
 - 语法：元素.cloneNode(true 或 false); 返回一份新的克隆后的元素
 
@@ -1124,22 +1119,19 @@ oldEle.parentNode.insertBefore(newEle, oldEle);
 </script>
 ```
 
-# 十一、事件监听
+## 事件监听
 
-## 1 为什么要学事件监听
+### 为什么要学事件监听
 
 - 需求：给一个元素连续绑定两次点击事件，并且事件处理程序都有效。
 
-## 2.事件监听注册事件
+### 事件监听注册事件
 
 - 语法：**事件源.addEventListener('事件类型',事件处理程序,是否捕获);**
-  > 事件源 → 操作的元素
-
-> 事件类型 → 在此不加 on, onclick→click
-
-> 事件处理程序 → 函数
-
-> 是否捕获，可选参数，默认为 false。 true→ 捕获，false→ 冒泡
+  - 事件源 → 操作的元素
+  - 事件类型 → 在此不加 on, onclick→click
+  - 事件处理程序 → 函数
+  - 是否捕获，可选参数，默认为 false。 true→ 捕获，false→ 冒泡
 
 ```html
 <body>
@@ -1178,19 +1170,22 @@ oldEle.parentNode.insertBefore(newEle, oldEle);
 </body>
 ```
 
-## 3.事件监听移除事件
+### 事件监听移除事件
 
 - 语法：**事件源.removeEventListener('事件类型',事件处理程序的名称)**
 - 事件源，操作的元素
 - 事件类型，不加 on
 - 事件处理程序的名字：函数名
-  - 注意：若将来要通过事件监听的方式移除事件时，之前注册事件**要把事件处理程序单独抽取出来命名** 。
-    > 绑定事件：
-    > on 的方式：元素.onclick = function () {}
-    > 事件监听：元素.addEventListener('click',function () {},参数);
-    > 移除事件：
-    > on 的方式：元素.onclick = null;
-    > 事件监听：元素.removeEventListener('click',事件处理名称);
+  - 注意：若将来要通过事件监听的方式移除事件时，之前注册事件**要把事件处理程序单独抽取出来命名**
+
+:::tip
+
+- 绑定事件： on 的方式：元素.onclick = function () {}
+- 事件监听：元素.addEventListener('click',function () {},参数);
+- 移除事件： on 的方式：元素.onclick = null;
+- 事件监听：元素.removeEventListener('click',事件处理名称);
+
+:::
 
 ```html
 <body>
@@ -1224,18 +1219,22 @@ oldEle.parentNode.insertBefore(newEle, oldEle);
 </body>
 ```
 
-## 4.事件流
+### 事件流
 
-![image](https://note.youdao.com/yws/public/resource/87878989158efcfd4b01af5369090c07/xmlnote/AFAD20CEBFA74FB791A53950079517C7/12752)
-**事件流** ：事件触发后的三个阶段（捕获阶段、==目标阶段==、==冒泡阶段==）。
+<img :src="$withBase('/image/javascript/events.png')" alt="">
 
-**注意：** 在事件触发后，这三个阶段始终是存在的，**顺序 ① 先捕获，② 到达目标，③ 再冒泡。** 但是在触发后，针对捕获和冒泡，仅仅启用一个。
+**事件流** ：事件触发后的三个阶段（捕获阶段、**目标阶段**、**冒泡阶段**）。
 
-## 5.事件冒泡
+**注意：** 在事件触发后，这三个阶段始终是存在的
+
+**顺序 ① 先捕获，② 到达目标，③ 再冒泡。** 但是在触发后，针对捕获和冒泡，仅仅启用一个。
+
+### 事件冒泡
 
 - 事件冒泡：目标阶段 →document
 - 事件触发后，事件类型会一级一级的网上冒泡，直到到 document
-  ![image](https://note.youdao.com/yws/public/resource/87878989158efcfd4b01af5369090c07/xmlnote/E3CBF30C834048E2B8C7DE776FE4379A/12759)
+
+<img :src="$withBase('/image/javascript/events2.png')" alt="">
 
 ```html
   <style>
@@ -1366,14 +1365,15 @@ oldEle.parentNode.insertBefore(newEle, oldEle);
 </body>
 ```
 
-## 6.事件捕获
+### 事件捕获
 
 - 事件捕获：document→ 目标阶段; 反冒泡
-  ![image](https://note.youdao.com/yws/public/resource/87878989158efcfd4b01af5369090c07/xmlnote/6AD9B233D7DC48DF88A5878D82961BB0/12770)
 
-# 十二、事件对象
+<img :src="$withBase('/image/javascript/events3.png')" alt="">
 
-## 1.什么是事件对象
+## 事件对象
+
+### 什么是事件对象
 
 事件对象，在事件==触发后== ，在==事件处理程序中== （函数体），所获取并操作的==对象==。
 
@@ -1381,7 +1381,7 @@ oldEle.parentNode.insertBefore(newEle, oldEle);
 
 事件触发后保存信息的对象
 
-## 2 获取事件对象
+### 获取事件对象
 
 - 语法：**`事件源.事件类型 = function(e){ // 第一个形参e就是事件对象 }`**
 
@@ -1398,7 +1398,7 @@ oldEle.parentNode.insertBefore(newEle, oldEle);
 </body>
 ```
 
-## 3.鼠标事件对象相关属性
+### 鼠标事件对象相关属性
 
 - 鼠标事件类型
 
@@ -1410,7 +1410,8 @@ oldEle.parentNode.insertBefore(newEle, oldEle);
   - onmousemove 鼠标移动
 
 - 鼠标事件对象相关属性-获取鼠标的位置 - 事件对象.clientX / 事件对象.clientY 参照是==浏览器== - 事件对象.pageX / 事件对象.pageY 参照是==文档== - 事件对象.offsetX / 事件对象.offsetY 参照是==当前的元素==
-  ![image](https://note.youdao.com/yws/public/resource/87878989158efcfd4b01af5369090c07/xmlnote/16B50D1F8CA04580AD749F9400AC00B7/12785)
+
+  <img :src="$withBase('/image/javascript/offset.png')" alt="">
 
 ```html
 <body>
@@ -1430,7 +1431,7 @@ oldEle.parentNode.insertBefore(newEle, oldEle);
 </body>
 ```
 
-## 4 键盘事件对象相关属性
+### 键盘事件对象相关属性
 
 - 键盘事件
 - 事件类型
@@ -1481,14 +1482,13 @@ oldEle.parentNode.insertBefore(newEle, oldEle);
 </body>
 ```
 
-## 5 事件对象的公共属性和方法
+### 事件对象的公共属性和方法
 
 - 属性：
-
-  > - ==事件对象.target== 获取最先触发的元素
-  > - 和 this 的区别
-  >   - this 在事件处理程序中始终代表的是事件源
-  >   - e.target 代表不一定是事件源，代表的是最先触发的元素【目标阶段 → document】
+  - ==事件对象.target== 获取最先触发的元素
+  - 和 this 的区别
+  - this 在事件处理程序中始终代表的是事件源
+  - e.target 代表不一定是事件源，代表的是最先触发的元素【目标阶段 → document】
 
 ```html
 <head>
@@ -1527,9 +1527,8 @@ oldEle.parentNode.insertBefore(newEle, oldEle);
 ```
 
 - 方法：
-
-  > - 事件对象.preventDefault(); 阻止默认行为
-  > - ==事件对象.stopPropagation();== 停止冒泡传播
+  - 事件对象.preventDefault(); 阻止默认行为
+  - ==事件对象.stopPropagation();== 停止冒泡传播
 
 ```html
 <body>
@@ -1562,22 +1561,24 @@ oldEle.parentNode.insertBefore(newEle, oldEle);
 </body>
 ```
 
-# 十三、事件委托
+## 事件委托
 
-## 1 事件委托
+### 事件委托
 
 **事件委托** （事件代理）：把子孙元素的事件注册，完全交给子孙元素的上级元素代理。
 注意：委托是下级元素委托上级元素。 没有上级委托下级
 
-## 2 如何实现事件委托
+### 如何实现事件委托
 
-实现步骤
+:::tip 实现步骤
 
-> ① 给子孙元素的上级注册事件
->
-> ② 在事件处理程序中，通过==事件对象.target== 获取最先触发的元素
->
-> ③ 可以通过==事件对象.target 的 nodeName== 属性检测最先触发的是否是指定元素
+- 给子孙元素的上级注册事件
+
+- 在事件处理程序中，通过==事件对象.target== 获取最先触发的元素
+
+- 可以通过==事件对象.target 的 nodeName== 属性检测最先触发的是否是指定元素
+
+:::
 
 ```html
 <head>
@@ -1637,31 +1638,31 @@ oldEle.parentNode.insertBefore(newEle, oldEle);
 </body>
 ```
 
-## 3.事件委托的作用
+### 事件委托的作用
 
 - 减少事件的绑定，节省内存。
 - 上级元素可以代理未来新动态添加的元素。
 
-## 4 事件委托的原理
+### 事件委托的原理
 
 - 关键：事件对象.target； 可以获取最先触发的元素
 - 原理：因为**事件冒泡**的存在,我们才可以获取到最先触发的元素。【目标 → document】
 
-# 十四、BOM 介绍
+## BOM 介绍
 
-## 1.BOM 的概念：浏览器对象模型
+### BOM 的概念：浏览器对象模型
 
-![image](https://note.youdao.com/yws/public/resource/87878989158efcfd4b01af5369090c07/xmlnote/775D603C34404DA28D81A1FA5F431400/12836)
+<img :src="$withBase('/image/javascript/bom.png')" alt="">
 
-## 2 顶级对象-window
+### 顶级对象-window
 
 **window 对象介绍**
 
 【对象.属性，对象.方法名()】
 
-> 1. window 对象被 称为==顶级对象== 或==全局对象== 。
-> 2. 因为全局变量和全局函数本质上都是 window 对象的属性或方法。
-> 3. window 对象可以省略。
+- window 对象被 称为==顶级对象== 或==全局对象== 。
+- 因为全局变量和全局函数本质上都是 window 对象的属性或方法。
+- window 对象可以省略。
 
 ```html
 <body>
@@ -1683,7 +1684,7 @@ oldEle.parentNode.insertBefore(newEle, oldEle);
 
 ### 定时器
 
-#### 1.一次性定时器
+#### 一次性定时器
 
 var num1= **window.setTimeout(callback, time);**
 
@@ -1718,7 +1719,7 @@ var num1= **window.setTimeout(callback, time);**
 </body>
 ```
 
-#### 2.重复性定时器
+#### 重复性定时器
 
 - window.setInterval(callback, time);
 - 作用：延迟执行一段程序，==重复执行== （闹钟）。返回一个数字，表示是哪个定时器。
@@ -1747,11 +1748,11 @@ var num1= **window.setTimeout(callback, time);**
 </body>
 ```
 
-#### 3.定时器执行
+#### 定时器执行
 
 - 定时器代码要等非定时器代码执行完成后在执行
 
-## 3.location 对象
+### location 对象
 
 - **location**对象，将来操作浏览器的地址栏。
 - 属性：
@@ -1790,7 +1791,7 @@ assign 和 replace 的区别：assign 会产生历史记录，replace 不会产�
 </body>
 ```
 
-## 4 history 对象
+### history 对象
 
 - **history 对象** ，用来操作历史记录
 - 属性：
@@ -1800,7 +1801,7 @@ assign 和 replace 的区别：assign 会产生历史记录，replace 不会产�
   - history.forward(); 前进下一个历史记录
   - history.go(数字); 正数，表示前进； 负数，表示回退；
 
-## 5 navigator 对象
+### navigator 对象
 
 - navigator 对象， 用来获取浏览器的信息。
 - 属性：
@@ -1826,7 +1827,7 @@ assign 和 replace 的区别：assign 会产生历史记录，replace 不会产�
 </body>
 ```
 
-## 6 onload 事件
+### onload 事件
 
 - onload 事件是页面加载事件，一般绑定给 window
 - 当页面吧图片，链接，引入资源加载完成之后，再回头立刻执行的事件
@@ -1852,12 +1853,13 @@ assign 和 replace 的区别：assign 会产生历史记录，replace 不会产�
 </body>
 ```
 
-## 7.open()方法
+### open()方法
 
 [详情](https://www.runoob.com/jsref/met-win-open.html)
 
 - open() 方法用于打开一个新的浏览器窗口或查找一个已命名的窗口
 - 语法：window.open(URL,name,specs,replace)
+
   - URL 可选。打开指定的页面的 URL。如果没有指定 URL，打开一个新的空白窗口
   - name：可选。指定 target 属性或窗口的名称。支持以下值：
 
@@ -1885,15 +1887,15 @@ function openWin() {
 }
 ```
 
-# 十五、元素的 offset 系列属性
+## 元素的 offset 系列属性
 
-## 1 获取元素的大小
+### 获取元素的大小
 
 **元素.offsetWidth / 元素.offsetHeight;**
 
-> 返回的是数字。 大小包含： 内容 + padding + border;
->
-> 注意：该属性仅仅==只能够读取== ，不能够设置
+- 返回的是数字。 大小包含： 内容 + padding + border;
+
+- 注意：该属性仅仅==只能够读取== ，不能够设置
 
 ```html
 <head>
@@ -1926,30 +1928,34 @@ function openWin() {
 </body>
 ```
 
-## 2.获取元素的位置
+### 获取元素的位置
 
 **元素.offsetLeft / 元素.offsetTop;** --->只读
 
 - 返回的是数字。（参照谁？看定位关系,依照父元素的定位当参照物）
+
   ① 若父级有定位,则参照物为父元素
+
   ② 若父级无定位,则往上找,直到找到定位元素当参照物
+
   ③ 当什么都不设定位时,找的是浏览器的可视窗口(有的说是 body),说 body 的前提是清除了 margin 和 padding,其实就相当于浏览器的可视窗口了
 
-## 3.获取元素的父元素
+### 获取元素的父元素
 
 **元素.offsetParent** 和 元素.parentNode 的区别
 
-> - 元素.offsetParent ，获取“父元素”， 按照定位关系。
-> - 元素.parentNode， 获取“父元素”， 按照标签关系。
->   ![image](https://note.youdao.com/yws/public/resource/87878989158efcfd4b01af5369090c07/xmlnote/7C2E297C69184F3B8F2E12071520510F/12915)
+- 元素.offsetParent ，获取“父元素”， 按照定位关系。
+- 元素.parentNode， 获取“父元素”， 按照标签关系。
 
-# 十六、元素的 client 系列属性
+<img :src="$withBase('/image/javascript/offsetParent.png')" alt="">
 
-## 1 获取元素的大小
+## 元素的 client 系列属性
+
+### 获取元素的大小
 
 \*\*元素.clientWidth / 元素.clientHeight---->不能设置是只读
 
-> 获取元素的大小，包含 【内容 + padding】没有 border
+- 获取元素的大小，包含 【内容 + padding】没有 border
 
 ```html
 <div></div>
@@ -1969,14 +1975,15 @@ function openWin() {
 </script>
 ```
 
-## 2 获取边框的厚度
+### 获取边框的厚度
 
-- 元素.clientLeft / 元素.clientTop  
-  ![image](https://note.youdao.com/yws/public/resource/87878989158efcfd4b01af5369090c07/xmlnote/E9A666CE37C14EC794AFF510794088AF/12931)
+- 元素.clientLeft / 元素.clientTop
 
-# 十七、元素的 scroll 系列属性
+<img :src="$withBase('/image/javascript/offsetParent2.png')" alt="">
 
-## 1 获取元素的大小
+## 元素的 scroll 系列属性
+
+### 获取元素的大小
 
 - 元素.scrollWidth / 元素.scrollHeight
 - 获取的元素的大小 ,包含 【内容+ padding + 溢出】没有 border
@@ -2013,11 +2020,12 @@ function openWin() {
 </body>
 ```
 
-## 2 获取被卷起的页面间距
+### 获取被卷起的页面间距
 
 - 元素.scrollLeft / **元素.scrollTop**
 - 获取的是在该元素中卷去的页面的间距。【该属性不仅可以获取，还可以设置】
-  ![image](https://note.youdao.com/yws/public/resource/87878989158efcfd4b01af5369090c07/xmlnote/00C6EA309816460C824261B546AC1887/12949)
+
+<img :src="$withBase('/image/javascript/scrollTop.png')" alt="">
 
 ```html
 <head>
@@ -2162,9 +2170,9 @@ function openWin() {
 - 获取 html document.documentElement.scrollTop
 - 获取 body document.body.scrollTop
 
-# 十八、移动端 touch 事件
+## 移动端 touch 事件
 
-## 1. touch 事件类型
+### touch 事件类型
 
 移动设备上无法使用鼠标，当手指触碰屏幕时会触发 click、mousedown、mouseup 事件。
 
@@ -2198,20 +2206,20 @@ function openWin() {
 </body>
 ```
 
-## 2. touch 事件对象
+### touch 事件对象
 
 - 常见的属性
 
-  > 1. 事件对象.touches ：位于屏幕上的所有手指的列表；e.touches，找某个手指对象 e.touches[0]
-  > 2. 事件对象.targetTouches ：位于该元素上的所有手指的列表；
-  > 3. 事件对象.changedTouches：被改变的手指列表。 touchstart 时包含刚与触摸屏接触的触点，touchend 时包含离开触摸屏的触点
+  - 事件对象.touches ：位于屏幕上的所有手指的列表；e.touches，找某个手指对象 e.touches[0]
+  - 事件对象.targetTouches ：位于该元素上的所有手指的列表；
+  - 事件对象.changedTouches：被改变的手指列表。 touchstart 时包含刚与触摸屏接触的触点，touchend 时包含离开触摸屏的触点
 
 - 手指的位置
 
-  > 1. 手指对象.clientX/Y 手指相对于可视区域
-  > 2. 手指对象.pageX/Y 手指相对于文档
-  >
-  > **注意：手指对象.clientX/Y 使用较多**
+  - 手指对象.clientX/Y 手指相对于可视区域
+  - 手指对象.pageX/Y 手指相对于文档
+
+  **注意：手指对象.clientX/Y 使用较多**
 
 ```html
 <body>
@@ -2256,12 +2264,12 @@ function openWin() {
 </body>
 ```
 
-## 3.常见的手势
+### 常见的手势
 
 ​ 注意：以下手势的实现是在 touch 事件基础上。我们不需要自己实现以下所有手势，有专门的第三方可以直接拿来使用。
 
 ​ 以下手势仅仅是了解。
-![image](https://note.youdao.com/yws/public/resource/87878989158efcfd4b01af5369090c07/xmlnote/469457D4016A458E82BCD4E1716F8806/12965)
+<img :src="$withBase('/image/javascript/touch.png')" alt="">
 
 - 模拟点击 tap 实现
 
@@ -2331,7 +2339,7 @@ function openWin() {
 </body>
 ```
 
-# 十九、transitionend 事件
+## transitionend 事件
 
 - css 中过渡结束后检测的行为【transitionend，谁有过渡把这个事件绑定给谁】
 

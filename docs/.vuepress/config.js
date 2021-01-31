@@ -72,7 +72,7 @@ module.exports = {
         },
         {
           title: 'webApi总结',
-          sidebarDepth: 5,
+          sidebarDepth: 6,
           children: [{
             title: 'webApi总结',
             path: '/frontend/javaScript/webApi'

@@ -17,6 +17,10 @@ module.exports = {
             text: 'javaScript',
             link: '/frontend/javaScript/',
           },
+          {
+            text: 'vue',
+            link: '/frontend/vue/',
+          },
         ]
       },
       {
@@ -58,9 +62,14 @@ module.exports = {
           title: 'javaScript基础',
           sidebarDepth: 5,
           children: [{
-            title: 'javaScript基础知识点',
-            path: '/frontend/javaScript/basics',
-          }, ]
+              title: 'javaScript基础知识点',
+              path: '/frontend/javaScript/basics',
+            },
+            {
+              title: '数组方法汇总',
+              path: '/frontend/javaScript/arryAll',
+            },
+          ]
         },
         {
           title: 'javaScript高级',
@@ -79,6 +88,14 @@ module.exports = {
           }, ]
         },
       ],
+      '/frontend/vue/': [{
+        title: 'vue相关',
+        sidebarDepth: 5,
+        children: [{
+          title: 'vue相关',
+          path: '/frontend/vue/vue-basics',
+        }, ]
+      }, ],
       '/guide-components/': [{
         title: '组件配置',
         sidebarDepth: 3,

@@ -24,12 +24,19 @@ module.exports = {
         ]
       },
       {
+        text: '后端知识',
+        items: [{
+          text: 'egg',
+          link: '/backend/egg/',
+        }, ]
+      },
+      {
         text: '通用组件',
         link: '/guide-components/'
       },
       {
         text: '其他',
-        link: '/guide-components/'
+        link: '/os/'
       },
       {
         text: 'GitHub',
@@ -69,6 +76,10 @@ module.exports = {
               title: '数组方法汇总',
               path: '/frontend/javaScript/arryAll',
             },
+            {
+              title: '其他',
+              path: '/frontend/javaScript/others',
+            },
           ]
         },
         {
@@ -94,6 +105,14 @@ module.exports = {
         children: [{
           title: 'vue相关',
           path: '/frontend/vue/vue-basics',
+        }, ]
+      }, ],
+      '/backend/egg/': [{
+        title: 'egg相关',
+        sidebarDepth: 5,
+        children: [{
+          title: 'egg相关',
+          path: '/backend/egg/egg-basics',
         }, ]
       }, ],
       '/guide-components/': [{

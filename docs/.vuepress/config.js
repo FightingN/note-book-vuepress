@@ -35,8 +35,20 @@ module.exports = {
         link: '/guide-components/'
       },
       {
-        text: '其他',
-        link: '/os/'
+        text: '更多',
+        items: [{
+            text: '代码规范',
+            link: '/more/code/',
+          },
+          {
+            text: '工具',
+            link: '/more/tool/',
+          },
+          {
+            text: 'git知识',
+            link: '/more/gitHub/',
+          },
+        ]
       },
       {
         text: 'GitHub',
@@ -115,6 +127,40 @@ module.exports = {
           path: '/backend/egg/egg-basics',
         }, ]
       }, ],
+      '/more/code/': [{
+        title: 'git提交规范',
+        sidebarDepth: 5,
+        children: [{
+          title: '代码规范',
+          path: '/more/code/standard',
+        }, ]
+      }, ],
+      '/more/tool/': [{
+          title: 'Mac电脑',
+          sidebarDepth: 5,
+          children: [{
+            title: '使用',
+            path: '/more/tool/mac',
+          }, ]
+        },
+        {
+          title: 'Vscode',
+          sidebarDepth: 5,
+          children: [{
+            title: '使用',
+            path: '/more/tool/vsode',
+          }, ]
+        },
+
+      ],
+      '/more/gitHub/': [{
+        title: 'gitHub',
+        sidebarDepth: 5,
+        children: [{
+          title: '命令集合',
+          path: '/more/gitHub/order',
+        }, ]
+      }, ],
       '/guide-components/': [{
         title: '组件配置',
         sidebarDepth: 3,
@@ -123,6 +169,7 @@ module.exports = {
           path: '/guide-components/text'
         }]
       }]
-    }
+    },
+    smoothScroll: true
   }
 }

@@ -217,20 +217,20 @@ vue create multi-page-demo
 <img :src="$withBase('/image/vue/vue5.png')" alt="">
 
 ```js
-const path = require("path");
+const path = require('path')
 module.exports = {
   lintOnSave: false,
   pages: {
     index: {
       // page 的入口
-      entry: "src/pages/index/main.js",
+      entry: 'src/pages/index/main.js',
       // 模板来源
-      template: "public/index.html",
+      template: 'public/index.html',
       // 在 dist/index.html 的输出
-      filename: "index.html",
+      filename: 'index.html',
       // 当使用 title 选项时，
       // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-      title: "Index Page",
+      title: 'Index Page',
       // 在这个页面中包含的块，默认情况下会包含
       // 提取出来的通用 chunk 和 vendor chunk。
       // chunks: ['chunk-vendors', 'chunk-common', 'index']
@@ -239,9 +239,9 @@ module.exports = {
     // 模板会被推导为 `public/subpage.html`
     // 并且如果找不到的话，就回退到 `public/index.html`。
     // 输出文件名会被推导为 `subpage.html`。
-    about: "src/pages/about/main.js",
+    about: 'src/pages/about/main.js',
   },
-};
+}
 ```
 
 - 页面路由访问
@@ -391,10 +391,10 @@ config
 [vue 官网](https://router.vuejs.org/zh/guide/advanced/lazy-loading.html#%E6%8A%8A%E7%BB%84%E4%BB%B6%E6%8C%89%E7%BB%84%E5%88%86%E5%9D%97)
 
 ```js
-const Foo = () => import("./Foo.vue");
+const Foo = () => import('./Foo.vue')
 const router = new VueRouter({
-  routes: [{ path: "/foo", component: Foo }],
-});
+  routes: [{ path: '/foo', component: Foo }],
+})
 ```
 
 - 或者把组件按组分块(未了解和实践)
@@ -445,7 +445,7 @@ npm install postcss-px2rem --save
 - 在 main.js 引入
 
 ```js
-import "lib-flexible";
+import 'lib-flexible'
 ```
 
 - vue.config.js
@@ -480,3 +480,40 @@ remUnit: 37.5
 - 效果
 
 <img :src="$withBase('/image/vue/vue10.png')" alt="">
+
+## vue 方法使用防抖和节流
+
+- utils 中封装好防抖和节流
+
+```js
+/**
+ * 防抖函数-目前仅是延迟执行版本
+ * @param fn function  要做处理的防抖函数
+ * @param delay number 延迟间隔-毫秒级
+ */
+export function debounce(fn, delay) {
+  const delays = delay || 200
+  let timer
+  return function () {
+    const th = this
+    const args = arguments
+    if (timer) {
+      clearTimeout(timer)
+    }
+    timer = setTimeout(function () {
+      timer = null
+      fn.apply(th, args)
+    }, delays)
+  }
+}
+```
+
+- 具体的 vue 文件
+
+```js
+  import { debounce, isNumber } from 'utils/common'
+  // methods中的方法
+   updateYearAverageIndex: debounce(function () {
+ 			写具体的逻辑代码
+    }, 1000),
+```

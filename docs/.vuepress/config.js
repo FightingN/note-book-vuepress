@@ -128,13 +128,22 @@ module.exports = {
         }, ]
       }, ],
       '/more/code/': [{
-        title: 'git提交规范',
-        sidebarDepth: 5,
-        children: [{
-          title: '代码规范',
-          path: '/more/code/standard',
-        }, ]
-      }, ],
+          title: 'git提交规范',
+          sidebarDepth: 5,
+          children: [{
+            title: '代码规范',
+            path: '/more/code/standard',
+          }, ]
+        },
+        {
+          title: 'vue书写规范',
+          sidebarDepth: 5,
+          children: [{
+            title: '代码规范',
+            path: '/more/code/vueStandard',
+          }, ]
+        },
+      ],
       '/more/tool/': [{
           title: 'Mac电脑',
           sidebarDepth: 5,

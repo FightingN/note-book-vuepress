@@ -7,3 +7,4 @@
 - [vue 项目构建优化](/frontend/vue/vue-basics.html#vue-%e9%a1%b9%e7%9b%ae%e6%9e%84%e5%bb%ba%e4%bc%98%e5%8c%96)
 - [vue 中的动态组件](/frontend/vue/vue-basics.html#vue-%e4%b8%ad%e7%9a%84%e5%8a%a8%e6%80%81%e7%bb%84%e4%bb%b6)
 - [vue 中 H5 页面的适配](/frontend/vue/vue-basics.html#vue-%e4%b8%ad-h5-%e9%a1%b5%e9%9d%a2%e7%9a%84%e9%80%82%e9%85%8d)
+- [vue 方法使用防抖和节流](/frontend/vue/vue-basics.html#vue-%e6%96%b9%e6%b3%95%e4%bd%bf%e7%94%a8%e9%98%b2%e6%8a%96%e5%92%8c%e8%8a%82%e6%b5%81)

@@ -517,3 +517,26 @@ export function debounce(fn, delay) {
  			写具体的逻辑代码
     }, 1000),
 ```
+
+## vue 的.sync 修饰符
+
+[官网](https://vue3js.cn/docs/zh/guide/migration/v-model.html#_2-x-%E8%AF%AD%E6%B3%95)
+
+- 为了解决数据双向绑定语法的简写
+- sync 修饰符是一个语法糖，类似 v-model，它主要是解决了父子组件的双向绑定问题。因为 vue 提倡的是单向数据流动，因此不能直接在子组件里面修改父组件传过来的数据，需要子组件触发一个方法，父组件绑定一个方法，写法比较麻烦
+- 引用组件的地方
+
+```js
+<ChildComponent :title.sync="pageTitle" />
+```
+
+- 组件内部
+
+```js
+   <button @click="closeAlert">关闭</button>
+    methods:{
+        closeAlert(){
+           this.$emit('update:title', '111')
+         }
+    }
+```

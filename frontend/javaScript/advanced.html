@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>面向对象 | FightingN的笔记</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="记录前端知识">
+    
+    <link rel="preload" href="/note-book-vuepress/assets/css/0.styles.75a1a968.css" as="style"><link rel="preload" href="/note-book-vuepress/assets/js/app.fae64974.js" as="script"><link rel="preload" href="/note-book-vuepress/assets/js/2.9d49b700.js" as="script"><link rel="preload" href="/note-book-vuepress/assets/js/15.6862c796.js" as="script"><link rel="prefetch" href="/note-book-vuepress/assets/js/10.2f5033fb.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/11.9a0b30a5.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/12.60546e01.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/13.9136c7d0.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/14.36d2f053.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/16.341e85d1.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/17.41c86c56.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/18.5bf69a78.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/19.99cb39cb.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/20.a965e3ff.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/21.af8b6f48.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/22.9ef709e3.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/23.7e1f7556.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/24.9be7ef70.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/25.ab37010f.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/26.0425f23f.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/27.30a8afc7.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/28.a7eed10c.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/29.fc2cded6.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/3.d3b33efc.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/30.52ff9abf.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/31.002db366.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/32.20e4f2a6.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/33.1594bc92.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/34.a6d8e802.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/4.985096d0.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/5.6017e59b.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/6.f706f8ba.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/7.2710ebfc.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/8.62b19281.js"><link rel="prefetch" href="/note-book-vuepress/assets/js/9.0f94af99.js">
+    <link rel="stylesheet" href="/note-book-vuepress/assets/css/0.styles.75a1a968.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/note-book-vuepress/" class="home-link router-link-active"><!----> <span class="site-name">FightingN的笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/note-book-vuepress/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端知识" class="dropdown-title"><span class="title">前端知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端知识" class="mobile-dropdown-title"><span class="title">前端知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/note-book-vuepress/frontend/css/" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/note-book-vuepress/frontend/javaScript/" class="nav-link router-link-active">
+  javaScript
+</a></li><li class="dropdown-item"><!----> <a href="/note-book-vuepress/frontend/vue/" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端知识" class="dropdown-title"><span class="title">后端知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端知识" class="mobile-dropdown-title"><span class="title">后端知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/note-book-vuepress/backend/egg/" class="nav-link">
+  egg
+</a></li></ul></div></div><div class="nav-item"><a href="/note-book-vuepress/guide-components/" class="nav-link">
+  通用组件
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="更多" class="mobile-dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/note-book-vuepress/more/code/" class="nav-link">
+  代码规范
+</a></li><li class="dropdown-item"><!----> <a href="/note-book-vuepress/more/tool/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/note-book-vuepress/more/gitHub/" class="nav-link">
+  git知识
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/FightingN/note-book-vuepress" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/note-book-vuepress/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端知识" class="dropdown-title"><span class="title">前端知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端知识" class="mobile-dropdown-title"><span class="title">前端知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/note-book-vuepress/frontend/css/" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/note-book-vuepress/frontend/javaScript/" class="nav-link router-link-active">
+  javaScript
+</a></li><li class="dropdown-item"><!----> <a href="/note-book-vuepress/frontend/vue/" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端知识" class="dropdown-title"><span class="title">后端知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端知识" class="mobile-dropdown-title"><span class="title">后端知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/note-book-vuepress/backend/egg/" class="nav-link">
+  egg
+</a></li></ul></div></div><div class="nav-item"><a href="/note-book-vuepress/guide-components/" class="nav-link">
+  通用组件
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="更多" class="mobile-dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/note-book-vuepress/more/code/" class="nav-link">
+  代码规范
+</a></li><li class="dropdown-item"><!----> <a href="/note-book-vuepress/more/tool/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/note-book-vuepress/more/gitHub/" class="nav-link">
+  git知识
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/FightingN/note-book-vuepress" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>javaScript基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>javaScript高级</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/note-book-vuepress/frontend/javaScript/advanced.html" aria-current="page" class="active sidebar-link">javaScript高级</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#面向对象" class="sidebar-link">面向对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#面向过程和面向对象" class="sidebar-link">面向过程和面向对象</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#如何面向对象编程" class="sidebar-link">如何面向对象编程</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#面向对象的好处" class="sidebar-link">面向对象的好处</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#面向对象的特征" class="sidebar-link">面向对象的特征</a></li></ul></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#类和对象" class="sidebar-link">类和对象</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#什么是类" class="sidebar-link">什么是类</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#什么是对象" class="sidebar-link">什么是对象</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#类-构造函数-和对象的关系" class="sidebar-link">类（构造函数）和对象的关系</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#创建对象" class="sidebar-link">创建对象</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#new-关键字的执行过程" class="sidebar-link">new 关键字的执行过程</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#构造函数和普通函数" class="sidebar-link">构造函数和普通函数</a></li></ul></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#原型" class="sidebar-link">原型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#为什么要学习原型" class="sidebar-link">为什么要学习原型</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#什么是原型" class="sidebar-link">什么是原型</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#构造函数和原型的关系" class="sidebar-link">构造函数和原型的关系</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#原型的作用" class="sidebar-link">原型的作用</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#实例对象和原型的关系" class="sidebar-link">实例对象和原型的关系</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#认识-object" class="sidebar-link">认识 object</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#原型链" class="sidebar-link">原型链</a></li></ul></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#继承介绍" class="sidebar-link">继承介绍</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#什么是继承" class="sidebar-link">什么是继承？</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#继承的作用" class="sidebar-link">继承的作用</a></li></ul></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#原型继承" class="sidebar-link">原型继承</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#如何实现原型继承" class="sidebar-link">如何实现原型继承？</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#优缺点" class="sidebar-link">优缺点</a></li></ul></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#借用继承" class="sidebar-link">借用继承</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#call-方法" class="sidebar-link">call 方法</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#使用-call-实现借用继承" class="sidebar-link">使用 call 实现借用继承</a></li></ul></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#组合继承" class="sidebar-link">组合继承</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#函数内部-this-的指向" class="sidebar-link">函数内部 this 的指向</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#普通函数中-this-的指向" class="sidebar-link">普通函数中 this 的指向</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#定时器中-this-的指向" class="sidebar-link">定时器中 this 的指向</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#构造函数中-this-指向" class="sidebar-link">构造函数中 this 指向</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#方法中-this-指向" class="sidebar-link">方法中 this 指向</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#事件处理程序中-this-指向" class="sidebar-link">事件处理程序中 this 指向</a></li></ul></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#改变-this-的指向" class="sidebar-link">改变 this 的指向</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#call-方法-2" class="sidebar-link">call 方法</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#apply-方法" class="sidebar-link">apply 方法</a></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#bind-方法" class="sidebar-link">bind 方法</a></li></ul></li><li class="sidebar-sub-header"><a href="/note-book-vuepress/frontend/javaScript/advanced.html#函数的其他成员" class="sidebar-link">函数的其他成员</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webApi总结</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="面向对象"><a href="#面向对象" class="header-anchor">#</a> 面向对象</h2> <h3 id="面向过程和面向对象"><a href="#面向过程和面向对象" class="header-anchor">#</a> 面向过程和面向对象</h3> <ul><li>面向过程：关注的是<strong>过程</strong>中的每一步
+现实需求（吃蛋炒饭）：开始 → 买鸡蛋 → 买米 → 炒蛋 → 蒸米.......→ 蛋炒饭 → 结束</li> <li>面向对象：关注的是<strong>对象</strong>能做什么，找对象做事
+现实需求：（吃蛋炒饭）: 老婆或老公或厨师做蛋炒饭（开始 → 买鸡蛋 → 买米 → 炒蛋 → 蒸米.......→ 蛋炒饭 → 结束）</li> <li>注意：面向对象不是替代面向过程，而是对过程的高度封装。</li></ul> <h3 id="如何面向对象编程"><a href="#如何面向对象编程" class="header-anchor">#</a> 如何面向对象编程</h3> <p>面向对象编程的概念：</p> <blockquote><p>​ Object Oriented Programming，简称 OOP ，是一种面向对象<strong>编程开发思想</strong> 。它将<strong>真实世界各种复杂的关系</strong> ，<strong>抽象为一个个对象</strong> ，然后由<strong>对象之间</strong>的<strong>分工</strong>与<strong>合作</strong>，完成对真实世界的模拟。</p> <p>① 真实世界各种复杂的关系：盖房子</p> <p>② 抽象为一个个对象（找对象）：找人，需要设计师、搬运工、砌墙师</p> <p>③ 对象之间的分工：设计师设计图纸、搬运工搬砖，搬运材料、砌墙师砌墙</p> <p>④ 对象之间的合作：搬运工搬砖给砌墙师用</p> <p>⑤ 完成</p></blockquote> <div class="custom-block tip"><p class="custom-block-title">面向对象编程的步骤：（重点）</p> <ol><li>明确需求</li> <li>划分对象</li> <li>对象分工</li> <li>对象合作</li> <li>完成目标</li></ol></div> <h3 id="面向对象的好处"><a href="#面向对象的好处" class="header-anchor">#</a> 面向对象的好处</h3> <ul><li>适合大型项目的开发，提高开发效率</li> <li>易于维护。</li></ul> <h3 id="面向对象的特征"><a href="#面向对象的特征" class="header-anchor">#</a> 面向对象的特征</h3> <ul><li><strong>封装</strong>：把过程封装到对象中</li> <li><strong>继承</strong>：子承父业。减少代码冗余（减少代码量）</li> <li>[多态]：一种事物（动物），具有多种形态（一条狗、一只猫.....）。</li></ul> <h2 id="类和对象"><a href="#类和对象" class="header-anchor">#</a> 类和对象</h2> <h3 id="什么是类"><a href="#什么是类" class="header-anchor">#</a> 什么是类</h3> <ul><li><strong>生活中</strong>：一类、种类</li> <li><strong>编程中</strong>：
+<ul><li>类指的是抽象的名称：狗</li> <li>class 关键字，ES6 之前没有类的概念。 我们现在学的是 ECMAScript3 和 ES5</li> <li>在 ES3 或 ES5 中通过<strong>构造函数</strong> 来创建对象</li> <li>构造函数：
+<ul><li>内置的：Object、Date、Array 等</li> <li>自定义：Dog</li></ul></li> <li>总结：现阶段我们通过==构造函数== 来创建对象</li> <li>new 关键字</li></ul></li></ul> <h3 id="什么是对象"><a href="#什么是对象" class="header-anchor">#</a> 什么是对象</h3> <ul><li>生活中：万物皆对象。任何具体的事和物都可以看成对象</li> <li>编程中：对象由<strong>属性</strong>和<strong>方法</strong>组成（或由键值对）。 具体的实例，实例对象
+<ul><li>属性：对象的静态特征，咱们班的班长，姓名、年龄、身高、性别</li> <li>方法：对象的功能特征，咱们班的班长，点名、写代码</li> <li>注意事项：
+<ul><li>方法的值用什么表示，用函数来表示</li> <li>对象方法中的 this，指向调用者。</li></ul></li></ul></li></ul> <h3 id="类-构造函数-和对象的关系"><a href="#类-构造函数-和对象的关系" class="header-anchor">#</a> 类（构造函数）和对象的关系</h3> <ul><li>类是对象的模板</li> <li>对象是类的具体实例（通过关键字 instanceof 检测一个对象是否属于某一个类型）
+<ul><li>语法：对象名 instanceof 构造函数名; 返回布尔值</li></ul></li> <li>创建对象得通过类（构造函数）创建</li> <li>new 构造函数() → 具体的实例</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">// 类： Object 构造函数 → 类 → 抽象的名词</span>
+    <span class="token comment">// 对象：new Object() 或 {} → 实例对象→ 具体的实例</span>
+    <span class="token comment">// 对象组成：属性和方法</span>
+    <span class="token comment">// 类和对象的关系：对象是类的一个实例，（对象属于类）</span>
+    <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 属性</span>
+      name<span class="token operator">:</span><span class="token string">'张三'</span><span class="token punctuation">,</span>
+      age<span class="token operator">:</span><span class="token number">10</span><span class="token punctuation">,</span>
+      <span class="token comment">// 方法</span>
+      <span class="token function-variable function">eat</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'我会吃....'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">sayHi</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">// 方法中的this指向调用者</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我叫'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    obj<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token comment">// obj的构造函数是 Object</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="创建对象"><a href="#创建对象" class="header-anchor">#</a> 创建对象</h3> <ul><li><p>语法：自定义构造函数</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">构造函数名</span><span class="token punctuation">(</span><span class="token parameter">参数<span class="token operator">...</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>key <span class="token operator">=</span> value；
+    <span class="token operator">...</span><span class="token operator">...</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 注意规范：构造函数名首字母要大写  帕斯卡（每个单词首字母大写）  驼峰（从第二个单词开始首字母大写）</span>
+</code></pre></div></li> <li><p>语法：<strong>new</strong>关键字创建对象</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> 对象名 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">构造函数名</span><span class="token punctuation">(</span>实参<span class="token operator">...</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li></ul> <h3 id="new-关键字的执行过程"><a href="#new-关键字的执行过程" class="header-anchor">#</a> new 关键字的执行过程</h3> <ul><li>在内存中创建一个空对象</li> <li>this 指向创建的对象</li> <li>向这个空对象中添加属性和方法</li> <li>返回当前的对象(默认返回值就是当前创建的对象)</li></ul> <h3 id="构造函数和普通函数"><a href="#构造函数和普通函数" class="header-anchor">#</a> 构造函数和普通函数</h3> <ul><li>相同点
+<ul><li>都是函数</li></ul></li> <li>不同点
+<ul><li>构造函数通过 new 关键字调用</li> <li>普通函数直接调用</li></ul></li></ul> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">// 需求：每一个学生会自我介绍（叫什么、多大了）、敲代码、唱歌</span>
+    <span class="token comment">// 对象有什么属性？  姓名和年龄</span>
+    <span class="token comment">// 对象有什么方法？  自我介绍、敲代码、唱歌</span>
+
+    <span class="token comment">// 定义构造函数</span>
+    <span class="token keyword">function</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span>age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 属性</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+      <span class="token comment">// 方法</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">sayHi</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我叫'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">'，今年'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">writeCode</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我会编程！'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">sing</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;我会唱歌&quot;</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token comment">// 创建对象</span>
+    <span class="token comment">// 一个函数是普通函数还构造函数，不是在定义时决定的，而是在调用时决定</span>
+    <span class="token comment">// Student();  → 普通函数</span>
+    <span class="token keyword">var</span> stu1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">'张三'</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// → 构造函数</span>
+
+    <span class="token comment">// 使用对象→ 使用对象的属性或使用对象的方法</span>
+    stu1<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><h2 id="原型"><a href="#原型" class="header-anchor">#</a> 原型</h2> <h3 id="为什么要学习原型"><a href="#为什么要学习原型" class="header-anchor">#</a> 为什么要学习原型</h3> <ul><li>前提：对象在内存中占据空间。对象的成员的数量可以决定对象在内存中占据空间的大小。</li> <li>在对象中，属性一般是变化的。 方法都是 function，是不变的。</li> <li>问题：对象的方法是不变的，每创建一个对象，都要存放 3 个方法，创建多个对象时，相对而言，会消耗内存。</li> <li>原因：对象的方法是不变的</li> <li>解决：想办法把不变的方法，抽取出来放在【原型】，让同类型的的对象共享即可。</li></ul> <h3 id="什么是原型"><a href="#什么是原型" class="header-anchor">#</a> 什么是原型</h3> <ul><li>原型就是一个对象，原型一直都在。</li> <li>获取原型：
+<ul><li>语法：<code>构造函数名.prototype</code></li></ul></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+
+    <span class="token comment">// 定义构造函数</span>
+    <span class="token keyword">function</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 属性</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 原型是一个对象，本来就有。</span>
+    <span class="token comment">// 每定义一个函数，系统会为其分配一个原型</span>
+    <span class="token comment">// 获取原型：函数名.prototype。 原型内部默认有一个constructor,指向对应的构造器→ 构造函数</span>
+    <span class="token keyword">var</span> yx <span class="token operator">=</span> <span class="token class-name">Student</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>yx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// console.log(yx.constructor === Student);  //true</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="构造函数和原型的关系"><a href="#构造函数和原型的关系" class="header-anchor">#</a> 构造函数和原型的关系</h3> <ul><li>理论
+<ul><li>构造函数可以通过 prototype 获取到原型</li> <li>原型可以通过 constructor 找到构造函数</li></ul></li></ul> <div class="language-js extra-class"><pre class="language-js"><code> <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">// 【定义构造函数】</span>
+    <span class="token keyword">function</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 属性</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 【使用原型】</span>
+    <span class="token keyword">var</span> yx <span class="token operator">=</span> <span class="token class-name">Student</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+    <span class="token comment">// 把方法添加到原型中。 对象.key = value;</span>
+    <span class="token comment">// 方法</span>
+    yx<span class="token punctuation">.</span><span class="token function-variable function">sayHi</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我叫'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">'，今年'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    yx<span class="token punctuation">.</span><span class="token function-variable function">writeCode</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我会编程！'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    yx<span class="token punctuation">.</span><span class="token function-variable function">sing</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;我会唱歌&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 【创建对象】</span>
+    <span class="token comment">// 创建第1个学生对象</span>
+    <span class="token keyword">var</span> zs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">'张三'</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 创建第2个学生对象</span>
+    <span class="token keyword">var</span> ls <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">'李四'</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 创建第3个学生对象</span>
+    <span class="token keyword">var</span> ww <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">'王五'</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="原型的作用"><a href="#原型的作用" class="header-anchor">#</a> 原型的作用</h3> <ul><li>节省内存。 因为原型中存放的成员（属性或方法），都可以被相关的构造函数所创建的对象<strong>共享</strong>。</li></ul> <h3 id="实例对象和原型的关系"><a href="#实例对象和原型的关系" class="header-anchor">#</a> 实例对象和原型的关系</h3> <ul><li><p>理论</p> <ul><li>首先，会从对象本身中去找</li> <li>若对象中，找不到，则会通过<code>__proto__</code>所提供的原型地址，找原型</li> <li>去原型中查找。</li></ul></li></ul> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">// 【定义构造函数】</span>
+    <span class="token keyword">function</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 属性</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 【使用原型】</span>
+    <span class="token keyword">var</span> yx <span class="token operator">=</span> <span class="token class-name">Student</span><span class="token punctuation">.</span>prototype<span class="token punctuation">;</span>
+    <span class="token comment">// 把方法添加到原型中。 对象.key = value;</span>
+    <span class="token comment">// 方法</span>
+    yx<span class="token punctuation">.</span><span class="token function-variable function">sayHi</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我叫'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">'，今年'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    yx<span class="token punctuation">.</span><span class="token function-variable function">writeCode</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我会编程！'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    yx<span class="token punctuation">.</span><span class="token function-variable function">sing</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;我会唱歌&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 【创建对象】</span>
+    <span class="token comment">// 创建第1个学生对象</span>
+    <span class="token keyword">var</span> zs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">'张三'</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// zs.sayHi();</span>
+    <span class="token comment">// zs.sing();</span>
+    <span class="token comment">// console.log(zs);</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>zs<span class="token punctuation">)</span>
+
+    <span class="token comment">// 对象在去访问或调用一个成员（属性或方法）时，过程是这样的：</span>
+    <span class="token comment">// 1. 先从对象自身查找，若查找不到</span>
+    <span class="token comment">// 2. 则会通过系统分配的__proto__（原型的地址）找到原型，去原型中查找要访问或调用成员</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><img src="/note-book-vuepress/image/javascript/pro.png" alt=""> <h3 id="认识-object"><a href="#认识-object" class="header-anchor">#</a> 认识 object</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+  <span class="token comment">// 第一个构造函数：Object // 祖宗类 // 在js中任何类型的对象，都属于Object //</span>
+  Object 是构造函数 <span class="token comment">// Object.prototype console.log(document instanceof Object);</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>console <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr
+  <span class="token keyword">instanceof</span> <span class="token class-name">Array</span><span class="token punctuation">)</span><span class="token punctuation">;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr <span class="token keyword">instanceof</span> <span class="token class-name">Object</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="原型链"><a href="#原型链" class="header-anchor">#</a> 原型链</h3> <img src="/note-book-vuepress/image/javascript/proto.png" alt=""> <img src="/note-book-vuepress/image/javascript/proto2.png" alt=""> <h2 id="继承介绍"><a href="#继承介绍" class="header-anchor">#</a> 继承介绍</h2> <h3 id="什么是继承"><a href="#什么是继承" class="header-anchor">#</a> 什么是继承？</h3> <ul><li>生活：子承父业</li> <li>编程：类与类之间的关系。 子类继承父类中的成员。
+<ul><li>不用继承：
+<ul><li>学生类：姓名、年龄、性别、打招呼、跑</li> <li>医生类：姓名、年龄、性别、打招呼、跑</li> <li>老师类：姓名、年龄、性别、打招呼、跑</li> <li>....</li></ul></li> <li>使用继承：
+<ul><li>人类[父类]：姓名、年龄、性别、打招呼、跑</li> <li>学生类[子类]→ 人类[父类]</li> <li>医生类[子类]→ 人类[父类]</li> <li>老师类[子类]→ 人类[父类]</li> <li>......</li></ul></li></ul></li></ul> <h3 id="继承的作用"><a href="#继承的作用" class="header-anchor">#</a> 继承的作用</h3> <ul><li>减少代码或简化代码。</li></ul> <h2 id="原型继承"><a href="#原型继承" class="header-anchor">#</a> 原型继承</h2> <h3 id="如何实现原型继承"><a href="#如何实现原型继承" class="header-anchor">#</a> 如何实现原型继承？</h3> <ul><li>先更改子类的原型 prototype 指向一个<strong>new 父类()</strong> 对象。
+<ul><li>子类.prototype = new 父类();</li></ul></li> <li>再给子类的原型设置一个 constructor 指向子类
+<ul><li>子类.prototype.constructor = 子类</li></ul></li> <li>然后用子类构造函数 new 出来的实例对象就可以调用原型继承的方法</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>   <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">// 【人类】- 父类</span>
+    <span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 属性</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'姓名'</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>gender <span class="token operator">=</span> <span class="token string">'男'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">sayHi</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我叫'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">run</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我会跑~~~'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 【学生类】-子类→继承人类</span>
+    <span class="token keyword">function</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>stuId <span class="token operator">=</span> <span class="token string">'1111'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// ① 更改子类构造函数的prototype指向父类的一个具体实例</span>
+    <span class="token class-name">Student</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// ② 为了更加完善，在父类的实例对象中添加一个constructor指向子类</span>
+    <span class="token class-name">Student</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">=</span> Student<span class="token punctuation">;</span>
+    <span class="token comment">// 创建一个学生对象</span>
+    <span class="token keyword">var</span> stu <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>stu<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="优缺点"><a href="#优缺点" class="header-anchor">#</a> 优缺点</h3> <p>优点：完美继承了方法</p> <p>缺点：无法完美继承属性</p> <h2 id="借用继承"><a href="#借用继承" class="header-anchor">#</a> 借用继承</h2> <h3 id="call-方法"><a href="#call-方法" class="header-anchor">#</a> call 方法</h3> <ul><li>语法：<code>函数名.call(调用者,函数实参，函数的实参...)</code>;</li> <li>作用：该函数会立即执行，函数体内的 this 在被 call 时，this 指向调用者</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">// 函数</span>
+    <span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>gender</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">===</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>gender <span class="token operator">=</span> gender<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 调用函数0</span>
+    <span class="token comment">// Person('张三',10,'男');</span>
+    <span class="token comment">// 普通函数内部this默认指向window</span>
+
+
+    <span class="token comment">// 【需求】:在调用执行Person时，更改函数内部this指向obj，实现把name、age、gender添加到obj中</span>
+    <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment">// 想办法实现Person函数内部this指向obj</span>
+    <span class="token comment">// 实现方式：函数名.call(调用者,函数实参，函数的实参...)</span>
+    <span class="token comment">// 在这一次调用时，函数内部this指向obj</span>
+    <span class="token function">Person</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span><span class="token string">'张三'</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token string">'男'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="使用-call-实现借用继承"><a href="#使用-call-实现借用继承" class="header-anchor">#</a> 使用 call 实现借用继承</h3> <p><strong>如何实现：</strong></p> <ul><li>在子类中，通过 call 调用父类，并更改父类中 this 的指向子类对象。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">// 【人类】- 父类</span>
+    <span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>gender</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 属性</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>gender <span class="token operator">=</span> gender<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">sayHi</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我叫'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">run</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我会跑~~~'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token comment">// 【学生类】-子类→继承人类</span>
+    <span class="token keyword">function</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>gender<span class="token punctuation">,</span>stuId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 在被new时，在Student中的this指向当前创建的对象 stu、stu2</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>stuId <span class="token operator">=</span> stuId<span class="token punctuation">;</span>
+      <span class="token comment">// var obj = this;</span>
+      <span class="token comment">// 借用</span>
+      <span class="token comment">// Person.call(obj,name,age,gender);</span>
+      <span class="token comment">// 把this放在这里，相当于把要给学生的实例对象的地址放在这里</span>
+      <span class="token function">Person</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span>name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>gender<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token comment">// 创建一个学生对象</span>
+    <span class="token keyword">var</span> stu <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">'张三'</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token string">'男'</span><span class="token punctuation">,</span><span class="token number">10086</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 创建一个学生对象</span>
+    <span class="token keyword">var</span> stu2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">'李四'</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token string">'女'</span><span class="token punctuation">,</span><span class="token number">10010</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token comment">// 结论：如何实现借用继承</span>
+    <span class="token comment">// 在子类构造函数中，使用call语法方式借用父类函数，更改父类函数中this指向子类的一个实例对象</span>
+    <span class="token comment">// 语法：父类函数名.call(子类实例,实参,实参....)</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><p><strong>优缺点：</strong></p> <ul><li>优点：完美继承了属性</li> <li>缺点：无法继承方法。</li></ul> <h2 id="组合继承"><a href="#组合继承" class="header-anchor">#</a> 组合继承</h2> <p><strong>如何实现</strong></p> <ul><li>原型继承和借用继承同时使用。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">// 【人类】- 父类</span>
+    <span class="token keyword">function</span> <span class="token function">Person</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>gender</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 属性</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>gender <span class="token operator">=</span> gender<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">sayHi</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我叫'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token class-name">Person</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">run</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'我会跑~~~'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token comment">// 【学生类】-子类→继承人类</span>
+    <span class="token keyword">function</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>gender<span class="token punctuation">,</span>stuId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>stuId <span class="token operator">=</span> stuId<span class="token punctuation">;</span>
+      <span class="token comment">// 【借用继承】</span>
+      <span class="token function">Person</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span>name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>gender<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 【原型继承】</span>
+    <span class="token class-name">Student</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Student</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">=</span> Student<span class="token punctuation">;</span>
+
+
+    <span class="token comment">// 创建一个学生对象</span>
+    <span class="token keyword">var</span> stu1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">'张三'</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token string">'男'</span><span class="token punctuation">,</span><span class="token number">10086</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 创建一个学生对象</span>
+    <span class="token keyword">var</span> stu2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">'李四'</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token string">'女'</span><span class="token punctuation">,</span><span class="token number">10010</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><h2 id="函数内部-this-的指向"><a href="#函数内部-this-的指向" class="header-anchor">#</a> 函数内部 this 的指向</h2> <ul><li>this 在函数中指向谁，不是在定义函数时决定的，而是在调用函数时决定的。</li></ul> <h3 id="普通函数中-this-的指向"><a href="#普通函数中-this-的指向" class="header-anchor">#</a> 普通函数中 this 的指向</h3> <ul><li>this 指向 window</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 【在普通函数中this指向window】</span>
+<span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> <span class="token function-variable function">fn</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">fn1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="定时器中-this-的指向"><a href="#定时器中-this-的指向" class="header-anchor">#</a> 定时器中 this 的指向</h3> <ul><li>this 指向 window</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 【在定时器中this指向windnow】</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="构造函数中-this-指向"><a href="#构造函数中-this-指向" class="header-anchor">#</a> 构造函数中 this 指向</h3> <ul><li>this 指向当前创建的对象-在内存中开辟的空间</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 【在构造函数中this指向当前创建的对象】</span>
+<span class="token comment">// 要通过new关键字执行过程理解</span>
+<span class="token keyword">function</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token class-name">Student</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">sayHi</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;我叫&quot;</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> stu1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> stu2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">&quot;李四&quot;</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="方法中-this-指向"><a href="#方法中-this-指向" class="header-anchor">#</a> 方法中 this 指向</h3> <ul><li>对象.方法名(); 指向调用者</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 【在方法中，this指向调用者。  对象.方法（）】</span>
+stu1<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+stu2<span class="token punctuation">.</span><span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="事件处理程序中-this-指向"><a href="#事件处理程序中-this-指向" class="header-anchor">#</a> 事件处理程序中 this 指向</h3> <ul><li>this 指向事件源</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 【在事件处理程序中，this指向事件源】</span>
+document<span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="改变-this-的指向"><a href="#改变-this-的指向" class="header-anchor">#</a> 改变 this 的指向</h2> <h3 id="call-方法-2"><a href="#call-方法-2" class="header-anchor">#</a> call 方法</h3> <ul><li>语法：==函数名.call(调用者,参数 1...)==</li> <li>作用：函数被借用时，会立即执行，并且函数体内的 this 会指向借用者或调用者</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 对象字面量</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token string">&quot;李四&quot;</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="apply-方法"><a href="#apply-方法" class="header-anchor">#</a> apply 方法</h3> <ul><li>语法：==函数名.apply(调用者,[参数 1...])==</li> <li>作用：函数被借用时，会立即执行，并且函数体内的 this 会指向借用者或调用者</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 对象字面量</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">&quot;李四&quot;</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="bind-方法"><a href="#bind-方法" class="header-anchor">#</a> bind 方法</h3> <ul><li>语法：==函数名.bind(调用者,参数 1...)==</li> <li>作用：函数被借用时，不会立即执行，而是返回一个新的函数。需要自己手动调用新的函数</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> age</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 对象字面量</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token string">&quot;李四&quot;</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token comment">// 函数</span>
+    <span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token operator">=</span> a<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>b <span class="token operator">=</span> b<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 对象</span>
+    <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment">// 需求: 在调用时，更改函数fn内部this指向obj</span>
+
+    <span class="token comment">// 【call方法】</span>
+    <span class="token comment">// - 语法：函数名.call(呼叫者,参数1...)</span>
+    <span class="token comment">// - 作用：函数被借用时，会立即执行，并且函数体内的this会指向借用者或呼叫者</span>
+    <span class="token comment">// fn.call(obj,100,200);</span>
+
+    <span class="token comment">// 【apply方法】</span>
+    <span class="token comment">// - 语法：函数名.apply(呼叫者,[参数1...])</span>
+    <span class="token comment">// - 作用：函数被借用时，会立即执行，并且函数体内的this会指向借用者或呼叫者</span>
+    <span class="token comment">// fn.apply(obj,[300,600]);</span>
+
+    <span class="token comment">// 【bind方法】</span>
+    <span class="token comment">// - 语法：函数名.bind(呼叫者,参数1...)</span>
+    <span class="token comment">// - 作用：函数被借用时，不会立即执行，而是返回一个新的函数。需要自己手动调用新的函数</span>
+    <span class="token comment">// 接收新的函数</span>
+    <span class="token keyword">var</span> newFn <span class="token operator">=</span> <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">,</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 直接调用</span>
+    <span class="token function">newFn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// fn.bind(obj,10000,50000)();</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+</code></pre></div><h2 id="函数的其他成员"><a href="#函数的其他成员" class="header-anchor">#</a> 函数的其他成员</h2></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/note-book-vuepress/frontend/javaScript/others.html" class="prev">
+        其他
+      </a></span> <span class="next"><a href="/note-book-vuepress/frontend/javaScript/webApi.html">
+        webApi总结
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/note-book-vuepress/assets/js/app.fae64974.js" defer></script><script src="/note-book-vuepress/assets/js/2.9d49b700.js" defer></script><script src="/note-book-vuepress/assets/js/15.6862c796.js" defer></script>
+  </body>
+</html>

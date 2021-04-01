@@ -8,3 +8,5 @@
 - [CSS 选择符有哪些？](/frontend/css/css-summary.html#css-%e9%80%89%e6%8b%a9%e7%ac%a6%e6%9c%89%e5%93%aa%e4%ba%9b)
 - [CSS3 新增伪类](/frontend/css/css-summary.html#css3-%e6%96%b0%e5%a2%9e%e4%bc%aa%e7%b1%bb)
 - [flex 布局](/frontend/css/css-summary.html#flex-%e5%b8%83%e5%b1%80-2)
+- [css 背景色渐变](/frontend/css/css-summary.html#css-%e8%83%8c%e6%99%af%e8%89%b2%e6%b8%90%e5%8f%98)
+- [盒子阴影](/frontend/css/css-summary.html#%e7%9b%92%e5%ad%90%e9%98%b4%e5%bd%b1)

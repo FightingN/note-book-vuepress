@@ -212,7 +212,7 @@ text-overflow: ellipsis; //	当文本溢出包含它的元素时,显示省略符
   }
 
   .container::after {
-    content: "";
+    content: '';
     display: inline-block;
     height: 100%;
     vertical-align: middle;
@@ -336,4 +336,37 @@ div {
 
 ## flex 布局
 
+## css 背景色渐变
 
+[css 教程](https://www.runoob.com/css3/css3-gradients.html)
+
+- 语法
+
+  ```js
+  background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+  ```
+
+- **线性渐变 - 从上到下**
+
+  ```js
+  #grad {
+      background-image: linear-gradient(#e66465, #9198e5);
+  }
+  ```
+
+- **线性渐变 - 从左到右**
+
+  ```js
+  #grad {
+    height: 200px;
+    background-image: linear-gradient(to right, red , yellow);
+  }
+  ```
+
+- 更多复杂的请跳转 css 教程链接
+
+## 盒子阴影
+
+[盒子阴影](https://www.jianshu.com/p/f5cb00b19747)
+
+[css3 教程](https://www.runoob.com/css3/css3-text-effects.html)
